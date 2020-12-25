@@ -1,0 +1,87 @@
+.wrapper{
+    margin : 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logout{
+    position : fixed;
+    right: 5%;
+    top : 5%;
+    font-size: 1.5em;
+}
+
+.contents{
+    width: 85%;
+    height: 20%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.main_degree{
+    width: 47.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*background-color: chartreuse;*/
+}
+
+.dot_degree{
+    width: 5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*background-color: black;*/
+}
+
+.dot{
+    font-size: 15vh;
+}
+
+.sub_degree{
+    width: 47.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /*background-color: blueviolet;*/
+}
+
+.num_main{
+    height: fit-content;
+    width: fit-content;
+    font-size: 15vh;
+}
+
+.num_sub{
+    height: fit-content;
+    width: fit-content;
+    font-size: 15vh;
+}
+
+.submit{
+    margin-top: 10%;
+    width: 85%;
+    height: 7%;
+}
+
+.success{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    font-size: 3vh;
+    font-weight: bolder;
+    color: white;
+    background-color: green;
+}
