@@ -1,0 +1,18 @@
+{% load socialaccount %}
+{% providers_media_js %}
+
+<h1>google oauth</h1>
+<br>
+
+<a href="/accounts/accounts/signup/">sign up</a>
+<br>
+
+{% if user.is_authenticated %}
+<a href="/accounts/accounts/logout/">logout</a>
+<br>
+<h4>Hello {{ user.username }}</h4>
+{% else %}
+<a href="{% provider_login_url 'google' %}">google login</a>
+<br>
+you should login
+{% endif %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<a href="{%url 'home'%}">home</a>
+<div class="container">
+    <form action="{%url 'create'%}">
+        <h4>title: </h4>
+        <input type="text" name="title">
+        <br><br>
+        <h4>name: </h4>
+        <textarea name="student_name" id="" cols="40" rows="10">
+            {{ user.username }}
+        </textarea>
+        <br><br>
+        <input class="btn" type="submit" value="submit">
+    </form>
+</div>
+
+{% endblock %}

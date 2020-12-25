@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>{{ thermal.title }}</h1>
+<p>{{ thermal.pub_date }}</p>
+<br>
+<p>{{ thermal.student_name }}</p>
+<br>
+<a href="{%url 'home'%}">home</a>
+
+{% endblock %}

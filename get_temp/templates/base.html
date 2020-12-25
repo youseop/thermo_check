@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thermal_check</title>
+</head>
+<body>
+
+{% if user.is_authenticated %}
+    <h1>Hi {{ user.get_username  }}</h1>
+    <a href="/accounts/accounts/logout/">logout</a>
+{% else %}
+    <a href="{%url 'oauthlogin'%}">oauthlogin</a>
+{% endif %}
+
+{% block content %}
+{% endblock %}
+
+</body>
+</html>
