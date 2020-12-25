@@ -1,7 +1,15 @@
 {% extends 'base.html' %}
 
 {% block content %}
+    {% if user.is_authenticated %}
+    <h1>Hi {{ user.get_username  }}</h1>
+    <a href="/accounts/accounts/logout/">logout</a>
+    {% else %}
+        <a href="{%url 'oauthlogin'%}">oauthlogin</a>
+    {% endif %}
+
     <div class="container">
-        <h1>Home page</h1>
+        <a style="all: unset; font-size: xx-large; cursor: pointer; color: crimson" href="/get_temp/new/">온도 체크!</a>
     </div>
+    
 {% endblock %}
