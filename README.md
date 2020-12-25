@@ -3,3 +3,9 @@
 
 
 get_temp/templates/new/
+
+
+## to_do
+
+- customized user name
+- display proper (year - month - date)
