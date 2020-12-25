@@ -28,6 +28,7 @@ def blogpost(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.pub_date = timezone.now()
+            print('time: ',timezone.now())
             post.save()
             return redirect('new')
     else:

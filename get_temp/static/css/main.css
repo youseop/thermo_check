@@ -85,3 +85,20 @@
     color: white;
     background-color: green;
 }
+
+.logout__btn{
+    all: unset;
+    width: 100% !important;
+    text-align: right;
+    padding: 20px;
+    margin-right: 50px;
+    color: black;
+    font-size: 30px;
+}
+.container__top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}

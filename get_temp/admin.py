@@ -1,5 +1,11 @@
 from django.contrib import admin
 from .models import Thermal
+from import_export.admin import ExportActionModelAdmin, ImportExportMixin, ImportMixin
 
-admin.site.register(Thermal)
+
+class ThermalAdmin(ImportExportMixin, admin.ModelAdmin):
+    pass
+
+
+admin.site.register(Thermal, ThermalAdmin)
 

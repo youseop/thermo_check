@@ -47,6 +47,9 @@ INSTALLED_APPS = [
     'allauth.socialaccount',
 
     'allauth.socialaccount.providers.google',
+    
+    #엑셀 파일로 변환
+    'import_export',
 ]
 
 MIDDLEWARE = [
