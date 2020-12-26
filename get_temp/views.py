@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Thermal
@@ -28,7 +29,6 @@ def blogpost(request):
         if form.is_valid():
             post = form.save(commit=False)
             post.pub_date = timezone.now()
-            print('time: ',timezone.now())
             post.save()
             return redirect('new')
     else:
@@ -38,3 +38,7 @@ def blogpost(request):
 
 def new(request):
     return render(request, 'new.html')
+
+
+def oauthlogin(request):
+    return render(request, 'oauthlogin.html')

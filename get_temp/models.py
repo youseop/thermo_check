@@ -11,3 +11,7 @@ class Thermal(models.Model):
 
     def summary(self):
         return self.title + ' / ' + self.pub_date + ' / ' + self.student_name
+
+
+class User(models.Model):
+    text = models.TextField()
