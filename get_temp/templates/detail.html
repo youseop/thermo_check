@@ -1,12 +1,18 @@
 {% extends 'base.html' %}
 
 {% block content %}
-
-<h1>{{ thermal.title }}</h1>
-<p>{{ thermal.pub_date }}</p>
+<div class="detail__container" style="width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+font-size: 5rem;
+font-weight: bolder;">
+<div>{{ thermal.student_name }}</div>
+<div>{{ thermal.title }}°C</div>
+<div>{{ thermal.pub_date }}</div>
 <br>
-<p>{{ thermal.student_name }}</p>
 <br>
-<a href="{%url 'new'%}">home</a>
-
+<a href="{%url 'new'%}" style="all:unset; font-size: 50px">Go Back</a>
+</div>
 {% endblock %}
