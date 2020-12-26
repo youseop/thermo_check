@@ -11,6 +11,8 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    overflow: hidden;
 }
 
 .logout{
@@ -122,6 +124,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    overflow: hidden;
 }
 .detail__container{
     width: 100vw;
