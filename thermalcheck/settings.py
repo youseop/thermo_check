@@ -29,6 +29,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
     'junglethermo.shop',
     '3.36.75.155',
+    '127.0.0.1',
 ]
 
 
@@ -42,7 +43,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'accounts.apps.AccountsConfig',
     'get_temp.apps.GetTempConfig',
 
     'allauth',

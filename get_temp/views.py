@@ -3,6 +3,7 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Thermal
 from .form import ThermalPost
+from datetime import datetime
 
 
 def home(request):
@@ -14,6 +15,7 @@ def create(request):
     blog.title = request.GET['title']
     blog.student_name = request.GET['student_name']
     blog.pub_date = timezone.datetime.now()
+    blog.time = str(datetime.now().hour) + ':' + str(datetime.now().minute)
     blog.save()
     return redirect('/get_temp/'+str(blog.id))
 
