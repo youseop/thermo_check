@@ -1,7 +1,9 @@
 # thermalcheck
  jungle_thermal_check_system
  
- #Role
+ This is a web that registers the body temperature and visiting time of visitors using Google login.
+
+## Role
  <br>
  Youseop - Google auth by Django
  <br>
