@@ -4,8 +4,8 @@
  This is a web that registers the body temperature and visiting time of visitors using Google login.
 
 ## Role
- <br>
- Youseop - Google auth by Django
+
+ Youseop - Google oauth by Django
  <br>
  Junghun - Thermo-scale scroll and overall design
  <br>
