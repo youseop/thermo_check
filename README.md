@@ -2,6 +2,7 @@
  jungle_thermal_check_system
  
  #Role
+ <br>
  Youseop - Google auth by Django
  <br>
  Junghun - Thermo-scale scroll and overall design
