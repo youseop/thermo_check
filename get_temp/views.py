@@ -4,7 +4,7 @@ from django.utils import timezone
 from .models import Thermal
 from .form import ThermalPost
 from datetime import datetime
-from pytz import timezone as tz 
+
 
 def home(request):
     return render(request, 'home.html')
@@ -14,10 +14,10 @@ def create(request):
     blog = Thermal()
     blog.title = request.GET['title']
     blog.student_name = request.GET['student_name']
-    blog.pub_date = timezone.datetime.now(tz('Asia/Seoul'))
-    blog.time = str(datetime.now(tz('Asia/Seoul')).hour) + ':' + str(datetime.now(tz('Asia/Seoul')).minute)
+    blog.pub_date = timezone.datetime.now()
+    blog.time = str(datetime.now().hour) + ':' + str(datetime.now().minute)
     blog.save()
-    return redirect('/get_temp/'+str(blog.id))
+    return redirect('/get_temp/' + str(blog.id))
 
 
 def detail(request, thermal_id):
@@ -39,7 +39,9 @@ def blogpost(request):
 
 
 def new(request):
-    return render(request, 'new.html')
+    curr_user = request.user.username
+    today_data = Thermal.objects.filter(student_name=curr_user, pub_date=timezone.now()).first()
+    return render(request, 'new.html', {'today_data': today_data})
 
 
 def oauthlogin(request):

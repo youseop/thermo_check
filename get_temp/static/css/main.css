@@ -35,7 +35,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    border: 1px solid gray;
+    border: 0px solid gray !important;
     border-radius: 10px;
 }
 
