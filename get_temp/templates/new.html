@@ -1,12 +1,31 @@
 {% extends 'base.html' %}
-
 {% block content %}
 {% load socialaccount %}
 {% providers_media_js %}
-
-
 {% if user.is_authenticated %}
+{% if today_data %}
+<div class="detail__container" style="width: 100vw; height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+font-size: 2rem;
+font-weight: bolder;">
+    <div>{{ today_data.student_name }}</div>
+    <div>{{ today_data.pub_date }}</div>
+<br>
+    <div>{{ today_data.title }}°C</div>
+<br>
+<div style="text-align: center">제출 되었습니다.<br> 즐거운 코딩 하세요🌞</div>
+<br>
 
+<div class="footer">
+    <!-- <a href="/get_temp/accounts/logout/" class="logout__btn">LOGOUT</a> -->
+    <a href="/get_temp/logout/" class="logout__btn">LOGOUT</a>
+    <a href="/admin/" class="logout__btn">ADMIN</a>
+</div>
+</div>
+{% else %}
 <div class="wrapper" id="wrapper">
     <div class="container__top">
         <h1 style="font-weight: bolder">{{ user.get_username  }}</h1>
@@ -24,11 +43,9 @@
                     36
                 </div>
             </div>
-
             <div class="dot_degree">
                 <div class="dot">.</div>
             </div>
-
             <div class="sub_degree">
                 <div class="num_sub" id="num_sub">
                     5
@@ -39,7 +56,8 @@
             <button id = "submit_btn" type="button" class="success" onclick="submit_thermo()">제출하기</button>
         </div>
     <div class="footer">
-        <a href="/get_temp/accounts/logout/" class="logout__btn">LOGOUT</a>
+        <!-- <a href="/get_temp/accounts/logout/" class="logout__btn">LOGOUT</a> -->
+        <a href="/get_temp/logout/" class="logout__btn">LOGOUT</a>
         <a href="/admin/" class="logout__btn">ADMIN</a>
     </div>
     <div style="display: none">
@@ -54,16 +72,11 @@
         </form>
     </div>
 </div>
-
-
-
-
+{% endif %}
 {% else %}
     <div class="google_login_container">
         <a href="{% provider_login_url 'google' %}" class="google__login">Google Login</a>
     </div>
 {% endif %}
-
 <script src="../static/js/main.js"></script>
-
 {% endblock %}

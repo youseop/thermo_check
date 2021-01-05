@@ -1,5 +1,6 @@
 from django.urls import path, include
 from . import views
+from django.contrib.auth import views as auth_views
 
 
 urlpatterns = [
@@ -8,4 +9,5 @@ urlpatterns = [
     path('newblog/', views.blogpost, name='newblog'),
     path('login/', views.oauthlogin, name='oauthlogin'),
     path('accounts/', include('allauth.urls')),
+    path('logout/', auth_views.LogoutView.as_view()),
 ]
